@@ -1,0 +1,95 @@
+$color-bg:  #F1F8E9;
+$color-lightest: #DCEDC8;
+$color-lighter: #C5E1A5;
+$color-light: #AED581;
+$color-normal: #8BC34A;
+$color-dark: #7CB342;
+$color-darker: #689F38;
+$color-darkest: #558B2F;
+
+$display-bg : #FFF8E1;
+$display-lightest: #FFECB3;
+$display-lighter: #FFE082;
+$display-light: #FFD54F;
+$display-normal: #FFC107;
+$display-dark: #FFC107;
+$display-darker : #FFB300;
+$display-darkest: #FF6F00;
+
+
+body{
+  background-color: $color-bg;
+}
+
+#root {
+  height: 100vh;
+}
+
+#app {
+  background-color: $color-bg;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  header {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1.4rem;
+  }
+
+  #drum-machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+    #display {
+      background-color: $color-darkest;
+      background: linear-gradient($display-normal,$display-darker,$display-normal);
+      color: $display-bg;
+      font-size: 2rem;
+      padding: 1.2rem;
+      margin: 1.4rem;
+      width: 10rem;
+      height: 5rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid $display-darker;
+      text-shadow: 0px 0px 20px $display-light,
+       0px 0px 10px $display-normal;
+      box-shadow: 0px 0px 1px 0.2px $display-darkest;
+    }
+
+
+
+    #pads {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.2rem;
+      outline: none;
+
+      .drum-pad {
+        cursor: pointer;
+        background-color: $color-light;
+        color: $color-darkest;
+        padding: 1.2rem;
+        font-size: 1.4rem;
+        border: 1px solid $color-normal;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px $color-light;
+        outline: none;
+        text-shadow: 0px 0px 4px $color-lightest,
+         0px 0px 5px $color-lightest;
+
+        &:hover{
+          box-shadow: 0px 0px 2px 2px $color-light;
+        }
+      }
+    }
+  }
+}

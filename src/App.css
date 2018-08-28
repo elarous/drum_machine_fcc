@@ -1,0 +1,57 @@
+body {
+  background-color: #F1F8E9; }
+
+#root {
+  height: 100vh; }
+
+#app {
+  background-color: #F1F8E9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  #app header {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1.4rem; }
+  #app #drum-machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem; }
+    #app #drum-machine #display {
+      background-color: #558B2F;
+      background: linear-gradient(#FFC107, #FFB300, #FFC107);
+      color: #FFF8E1;
+      font-size: 2rem;
+      padding: 1.2rem;
+      margin: 1.4rem;
+      width: 10rem;
+      height: 5rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid #FFB300;
+      text-shadow: 0px 0px 20px #FFD54F, 0px 0px 10px #FFC107;
+      box-shadow: 0px 0px 1px 0.2px #FF6F00; }
+    #app #drum-machine #pads {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.2rem;
+      outline: none; }
+      #app #drum-machine #pads .drum-pad {
+        cursor: pointer;
+        background-color: #AED581;
+        color: #558B2F;
+        padding: 1.2rem;
+        font-size: 1.4rem;
+        border: 1px solid #8BC34A;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px #AED581;
+        outline: none;
+        text-shadow: 0px 0px 4px #DCEDC8, 0px 0px 5px #DCEDC8; }
+        #app #drum-machine #pads .drum-pad:hover {
+          box-shadow: 0px 0px 2px 2px #AED581; }
